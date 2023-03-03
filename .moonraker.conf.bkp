@@ -1,12 +1,9 @@
 [server]
 host = 0.0.0.0
 port = 7125
-enable_debug_logging = False
 max_upload_size = 1024
 
 [file_manager]
-config_path = ~/klipper_config
-log_path = ~/klipper_logs
 enable_object_processing = True
 
 [authorization]
@@ -41,8 +38,6 @@ type = web
 channel = stable
 repo = mainsail-crew/mainsail
 path = ~/mainsail
-
-[timelapse]
 
 [update_manager timelapse]
 type = git_repo
@@ -87,4 +82,21 @@ env = ~/.KlipperScreen-env/bin/python
 requirements = scripts/KlipperScreen-requirements.txt
 install_script = scripts/KlipperScreen-install.sh
 managed_services = KlipperScreen
+
+[update_manager moonraker-obico]
+type = git_repo
+path = ~/moonraker-obico
+origin = https://github.com/TheSpaghettiDetective/moonraker-obico.git
+env = /home/pi/moonraker-obico-env/bin/python
+requirements = requirements.txt
+install_script = install.sh
+managed_services = 
+	moonraker-obico
+
+[update_manager ercf-happy_hare]
+type = git_repo
+path = ~/ERCF-Software-V3
+origin = https://github.com/moggieuk/ERCF-Software-V3.git
+install_script = install.sh
+managed_services = klipper
 

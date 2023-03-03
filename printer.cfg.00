@@ -1,4 +1,3 @@
-
 ## Voron Design VORON2 250/300/350mm Spider TMC2209 UART config
 
 # Include other config files
@@ -12,10 +11,7 @@
 [include caselight.cfg]
 [include framecomp.cfg]
 #[include timelapse.cfg]
-[include ERCF/ercf_hardware.cfg]
-[include ERCF/ercf_parameters.cfg]
-[include ERCF/ercf_software.cfg]
-#[include ERCF/client_macros.cfg]
+[include ERCF/ercf.cfg]
 
 [mcu]
 ##  Obtain definition by "ls -l /dev/serial/by-id/" 
